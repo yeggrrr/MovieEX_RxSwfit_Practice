@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct MovieModel {
+struct MovieModel: Decodable {
     let boxOfficeResult: BoxOfficeResult
 }
 
