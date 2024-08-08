@@ -7,19 +7,48 @@
 
 import UIKit
 import SnapKit
+import RxSwift
+import RxCocoa
 
-class BoxOfficeViewController: UIViewController {
-    let searchBar = UISearchBar()
-    let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewlayout())
-    let tableView = UITableView()
+final class BoxOfficeViewController: UIViewController {
+    private let searchBar = UISearchBar()
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewlayout())
+    private let tableView = UITableView()
+    
+    private let viewModel = BoxOfficeViewModel()
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configure()
+        bind()
     }
     
-    func configure() {
+    private func bind() {
+        let recentText = PublishSubject<String>()
+        
+        let input = BoxOfficeViewModel.Input(recentText: recentText,
+                                             searchButtonTap: searchBar.rx.searchButtonClicked,
+                                             searchText: searchBar.rx.text.orEmpty)
+        let output = viewModel.transform(input: input)
+        
+        output.recentList
+            .bind(to: collectionView.rx.items(cellIdentifier: MovieCollectionViewCell.identifier, cellType: MovieCollectionViewCell.self)) { (row, element, cell) in
+                cell.label.text = element
+
+            }
+            .disposed(by: disposeBag)
+        
+        output.movieList
+            .bind(to: tableView.rx.items(cellIdentifier: MovieTableViewCell.identifier, cellType: MovieTableViewCell.self)) { (row, element, cell) in
+                cell.appNameLabel.text = element.movieNm
+                cell.downloadButton.setTitle(element.openDt, for: .normal)
+            }
+            .disposed(by: disposeBag)
+    }
+    
+    private func configure() {
         view.backgroundColor = .white
         view.addSubviews([searchBar, collectionView, tableView])
         
@@ -46,7 +75,7 @@ class BoxOfficeViewController: UIViewController {
         }
     }
     
-    static func collectionViewlayout() ->  UICollectionViewFlowLayout {
+    private static func collectionViewlayout() ->  UICollectionViewFlowLayout {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 120, height: 40)
         layout.scrollDirection = .horizontal

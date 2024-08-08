@@ -20,7 +20,7 @@ final class MovieCollectionViewCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) { fatalError("init(coder:) has not been implemented") }
     
-    func configure() {
+    private func configure() {
         contentView.addSubview(label)
         label.snp.makeConstraints {
             $0.edges.equalTo(contentView)

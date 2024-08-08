@@ -17,7 +17,7 @@ final class MovieTableViewCell: UITableViewCell {
         return label
     }()
     
-    let appIconImageView: UIImageView = {
+    private let appIconImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
