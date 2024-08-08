@@ -9,25 +9,32 @@
 /* Begin PBXBuildFile section */
 		68CED2442C6484830043266A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2432C6484830043266A /* AppDelegate.swift */; };
 		68CED2462C6484830043266A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2452C6484830043266A /* SceneDelegate.swift */; };
-		68CED2482C6484830043266A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2472C6484830043266A /* ViewController.swift */; };
-		68CED24B2C6484830043266A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 68CED24A2C6484830043266A /* Base */; };
+		68CED2482C6484830043266A /* BoxOfficeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2472C6484830043266A /* BoxOfficeViewController.swift */; };
 		68CED24D2C6484840043266A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 68CED24C2C6484840043266A /* Assets.xcassets */; };
 		68CED2502C6484840043266A /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 68CED24F2C6484840043266A /* Base */; };
 		68CED2582C6485920043266A /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 68CED2572C6485920043266A /* .gitignore */; };
 		68CED25C2C6485C20043266A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED25B2C6485C20043266A /* APIKey.swift */; };
+		68CED25F2C6487690043266A /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED25E2C6487690043266A /* RxCocoa */; };
+		68CED2612C6487690043266A /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2602C6487690043266A /* RxSwift */; };
+		68CED2642C6487750043266A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2632C6487750043266A /* SnapKit */; };
+		68CED2662C64883F0043266A /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2652C64883F0043266A /* MovieCollectionViewCell.swift */; };
+		68CED2682C6488490043266A /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2672C6488490043266A /* MovieTableViewCell.swift */; };
+		68CED26B2C648C330043266A /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED26A2C648C330043266A /* View+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		68CED2402C6484830043266A /* MovieEX_RxSwfit_Practice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieEX_RxSwfit_Practice.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		68CED2432C6484830043266A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		68CED2452C6484830043266A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		68CED2472C6484830043266A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		68CED24A2C6484830043266A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		68CED2472C6484830043266A /* BoxOfficeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewController.swift; sourceTree = "<group>"; };
 		68CED24C2C6484840043266A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		68CED24F2C6484840043266A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		68CED2512C6484840043266A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		68CED2572C6485920043266A /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		68CED25B2C6485C20043266A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
+		68CED2652C64883F0043266A /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
+		68CED2672C6488490043266A /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		68CED26A2C648C330043266A /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +42,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				68CED2642C6487750043266A /* SnapKit in Frameworks */,
+				68CED2612C6487690043266A /* RxSwift in Frameworks */,
+				68CED25F2C6487690043266A /* RxCocoa in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,14 +73,32 @@
 			children = (
 				68CED2432C6484830043266A /* AppDelegate.swift */,
 				68CED2452C6484830043266A /* SceneDelegate.swift */,
-				68CED2472C6484830043266A /* ViewController.swift */,
-				68CED2492C6484830043266A /* Main.storyboard */,
 				68CED24C2C6484840043266A /* Assets.xcassets */,
 				68CED24E2C6484840043266A /* LaunchScreen.storyboard */,
+				68CED26C2C648C380043266A /* Extension */,
+				68CED2692C6488590043266A /* Movie */,
 				68CED2512C6484840043266A /* Info.plist */,
 				68CED25B2C6485C20043266A /* APIKey.swift */,
 			);
 			path = MovieEX_RxSwfit_Practice;
+			sourceTree = "<group>";
+		};
+		68CED2692C6488590043266A /* Movie */ = {
+			isa = PBXGroup;
+			children = (
+				68CED2472C6484830043266A /* BoxOfficeViewController.swift */,
+				68CED2652C64883F0043266A /* MovieCollectionViewCell.swift */,
+				68CED2672C6488490043266A /* MovieTableViewCell.swift */,
+			);
+			path = Movie;
+			sourceTree = "<group>";
+		};
+		68CED26C2C648C380043266A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				68CED26A2C648C330043266A /* View+.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +117,11 @@
 			dependencies = (
 			);
 			name = MovieEX_RxSwfit_Practice;
+			packageProductDependencies = (
+				68CED25E2C6487690043266A /* RxCocoa */,
+				68CED2602C6487690043266A /* RxSwift */,
+				68CED2632C6487750043266A /* SnapKit */,
+			);
 			productName = MovieEX_RxSwfit_Practice;
 			productReference = 68CED2402C6484830043266A /* MovieEX_RxSwfit_Practice.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +150,10 @@
 				Base,
 			);
 			mainGroup = 68CED2372C6484830043266A;
+			packageReferences = (
+				68CED25D2C6487690043266A /* XCRemoteSwiftPackageReference "RxSwift" */,
+				68CED2622C6487750043266A /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = 68CED2412C6484830043266A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -134,7 +171,6 @@
 				68CED2582C6485920043266A /* .gitignore in Resources */,
 				68CED24D2C6484840043266A /* Assets.xcassets in Resources */,
 				68CED2502C6484840043266A /* Base in Resources */,
-				68CED24B2C6484830043266A /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,8 +181,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				68CED2482C6484830043266A /* ViewController.swift in Sources */,
+				68CED2482C6484830043266A /* BoxOfficeViewController.swift in Sources */,
 				68CED2442C6484830043266A /* AppDelegate.swift in Sources */,
+				68CED2682C6488490043266A /* MovieTableViewCell.swift in Sources */,
+				68CED2662C64883F0043266A /* MovieCollectionViewCell.swift in Sources */,
+				68CED26B2C648C330043266A /* View+.swift in Sources */,
 				68CED25C2C6485C20043266A /* APIKey.swift in Sources */,
 				68CED2462C6484830043266A /* SceneDelegate.swift in Sources */,
 			);
@@ -155,14 +194,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		68CED2492C6484830043266A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				68CED24A2C6484830043266A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		68CED24E2C6484840043266A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -377,6 +408,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		68CED25D2C6487690043266A /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
+		68CED2622C6487750043266A /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		68CED25E2C6487690043266A /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED25D2C6487690043266A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		68CED2602C6487690043266A /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED25D2C6487690043266A /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		68CED2632C6487750043266A /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED2622C6487750043266A /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 68CED2382C6484830043266A /* Project object */;
 }
