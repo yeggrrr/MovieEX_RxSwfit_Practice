@@ -9,7 +9,7 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-final class BoxOfficeViewModel {
+final class BoxOfficeViewModel: BaseViewModel {
     private var recentList: [String] = []
     
     private let disposeBag = DisposeBag()
@@ -50,6 +50,9 @@ final class BoxOfficeViewModel {
             .map { return "\($0)"}
             .flatMap { value in
                 NetworkManager.shared.callBoxOffice(date: value)
+                    .catch { error in
+                        return Single<MovieModel>.never()
+                    }
             }
             .subscribe(with: self) { owner, movie in
                 boxOfficeList.onNext(movie.boxOfficeResult.dailyBoxOfficeList)
