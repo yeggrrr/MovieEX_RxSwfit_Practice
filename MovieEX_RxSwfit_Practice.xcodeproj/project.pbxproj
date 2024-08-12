@@ -23,6 +23,8 @@
 		68CED26F2C648EFB0043266A /* BoxOfficeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED26E2C648EFB0043266A /* BoxOfficeViewModel.swift */; };
 		68CED2712C648FA30043266A /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2702C648FA30043266A /* MovieModel.swift */; };
 		68CED2772C6491E00043266A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2762C6491E00043266A /* NetworkManager.swift */; };
+		68CED2EF2C6A03F50043266A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 68CED2EE2C6A03F50043266A /* Alamofire */; };
+		68CED2F22C6A08800043266A /* BaseViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CED2F12C6A08800043266A /* BaseViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +43,7 @@
 		68CED26E2C648EFB0043266A /* BoxOfficeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxOfficeViewModel.swift; sourceTree = "<group>"; };
 		68CED2702C648FA30043266A /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
 		68CED2762C6491E00043266A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		68CED2F12C6A08800043266A /* BaseViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +52,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68CED2642C6487750043266A /* SnapKit in Frameworks */,
+				68CED2EF2C6A03F50043266A /* Alamofire in Frameworks */,
 				68CED2612C6487690043266A /* RxSwift in Frameworks */,
 				68CED25F2C6487690043266A /* RxCocoa in Frameworks */,
 			);
@@ -82,6 +86,7 @@
 				68CED24C2C6484840043266A /* Assets.xcassets */,
 				68CED24E2C6484840043266A /* LaunchScreen.storyboard */,
 				68CED2752C6491C70043266A /* Network */,
+				68CED2F02C6A08720043266A /* Protocol */,
 				68CED26C2C648C380043266A /* Extension */,
 				68CED2692C6488590043266A /* Movie */,
 				68CED2512C6484840043266A /* Info.plist */,
@@ -142,6 +147,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		68CED2F02C6A08720043266A /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				68CED2F12C6A08800043266A /* BaseViewModel.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -162,6 +175,7 @@
 				68CED25E2C6487690043266A /* RxCocoa */,
 				68CED2602C6487690043266A /* RxSwift */,
 				68CED2632C6487750043266A /* SnapKit */,
+				68CED2EE2C6A03F50043266A /* Alamofire */,
 			);
 			productName = MovieEX_RxSwfit_Practice;
 			productReference = 68CED2402C6484830043266A /* MovieEX_RxSwfit_Practice.app */;
@@ -194,6 +208,7 @@
 			packageReferences = (
 				68CED25D2C6487690043266A /* XCRemoteSwiftPackageReference "RxSwift" */,
 				68CED2622C6487750043266A /* XCRemoteSwiftPackageReference "SnapKit" */,
+				68CED2ED2C6A03F50043266A /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 68CED2412C6484830043266A /* Products */;
 			projectDirPath = "";
@@ -223,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				68CED2712C648FA30043266A /* MovieModel.swift in Sources */,
+				68CED2F22C6A08800043266A /* BaseViewModel.swift in Sources */,
 				68CED2482C6484830043266A /* BoxOfficeViewController.swift in Sources */,
 				68CED2772C6491E00043266A /* NetworkManager.swift in Sources */,
 				68CED2442C6484830043266A /* AppDelegate.swift in Sources */,
@@ -470,6 +486,14 @@
 				minimumVersion = 5.7.1;
 			};
 		};
+		68CED2ED2C6A03F50043266A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -487,6 +511,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 68CED2622C6487750043266A /* XCRemoteSwiftPackageReference "SnapKit" */;
 			productName = SnapKit;
+		};
+		68CED2EE2C6A03F50043266A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 68CED2ED2C6A03F50043266A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
